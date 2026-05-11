@@ -5,9 +5,10 @@ from datetime import datetime
 import networkx as nx
 
 
-def getPesoTempoPercorrenza(u, v, param):
+def getPesoTempoPercorrenza(u, v, vel):
     dist = geopy.distance.distance((u.cordX, u.cordY), (v.cordX, v.cordY)).km
     time = dist/vel* 60 #minuti
+    return time
 
 
 class Model:
